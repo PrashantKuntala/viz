@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Visualizations in D3</title>
+  <!-- custom styles -->
+  <link rel="stylesheet" href="./css/master.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/bootstrap.min.js" charset="utf-8"></script>
+
+  <!-- Feather svg icons -->
+  <script src="./js/feather.min.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+
+  <div class="container py-4">
+
+    <hr>
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-2" id="chartArea">
+        <h1 class="display-5 fw-bold">A Collection of Data Visualizations in
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 116 111">
+            <clipPath id="clip">
+              <path
+                d="M0,0h7.75a45.5,45.5 0 1 1 0,91h-7.75v-20h7.75a25.5,25.5 0 1 0 0,-51h-7.75zm36.2510,0h32a27.75,27.75 0 0 1 21.331,45.5a27.75,27.75 0 0 1 -21.331,45.5h-32a53.6895,53.6895 0 0 0 18.7464,-20h13.2526a7.75,7.75 0 1 0 0,-15.5h-7.75a53.6895,53.6895 0 0 0 0,-20h7.75a7.75,7.75 0 1 0 0,-15.5h-13.2526a53.6895,53.6895 0 0 0 -18.7464,-20z" />
+            </clipPath>
+            <linearGradient id="gradient-1" gradientUnits="userSpaceOnUse" x1="7" y1="64" x2="50" y2="107">
+              <stop offset="0" stop-color="#f9a03c" />
+              <stop offset="1" stop-color="#f7974e" />
+            </linearGradient>
+            <linearGradient id="gradient-2" gradientUnits="userSpaceOnUse" x1="2" y1="-2" x2="87" y2="84">
+              <stop offset="0" stop-color="#f26d58" />
+              <stop offset="1" stop-color="#f9a03c" />
+            </linearGradient>
+            <linearGradient id="gradient-3" gradientUnits="userSpaceOnUse" x1="45" y1="-10" x2="108" y2="53">
+              <stop offset="0" stop-color="#b84e51" />
+              <stop offset="1" stop-color="#f68e48" />
+            </linearGradient>
+            <g clip-path="url(#clip)">
+              <path d="M-100,-102m-28,0v300h300z" fill="url(#gradient-1)" />
+              <path d="M-100,-102m28,0h300v300z" fill="url(#gradient-3)" />
+              <path d="M-100,-102l300,300" fill="none" stroke="url(#gradient-2)" stroke-width="40" />
+            </g>
+          </svg>
+        </h1>
+      </div>
+    </div>
+
+
+    <footer class="pt-3 mt-4 text-muted border-top">
+      Made with <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="-10 -10 116 111">
+        <clipPath id="clip">
+          <path
+            d="M0,0h7.75a45.5,45.5 0 1 1 0,91h-7.75v-20h7.75a25.5,25.5 0 1 0 0,-51h-7.75zm36.2510,0h32a27.75,27.75 0 0 1 21.331,45.5a27.75,27.75 0 0 1 -21.331,45.5h-32a53.6895,53.6895 0 0 0 18.7464,-20h13.2526a7.75,7.75 0 1 0 0,-15.5h-7.75a53.6895,53.6895 0 0 0 0,-20h7.75a7.75,7.75 0 1 0 0,-15.5h-13.2526a53.6895,53.6895 0 0 0 -18.7464,-20z" />
+        </clipPath>
+        <linearGradient id="gradient-1" gradientUnits="userSpaceOnUse" x1="7" y1="64" x2="50" y2="107">
+          <stop offset="0" stop-color="#f9a03c" />
+          <stop offset="1" stop-color="#f7974e" />
+        </linearGradient>
+        <linearGradient id="gradient-2" gradientUnits="userSpaceOnUse" x1="2" y1="-2" x2="87" y2="84">
+          <stop offset="0" stop-color="#f26d58" />
+          <stop offset="1" stop-color="#f9a03c" />
+        </linearGradient>
+        <linearGradient id="gradient-3" gradientUnits="userSpaceOnUse" x1="45" y1="-10" x2="108" y2="53">
+          <stop offset="0" stop-color="#b84e51" />
+          <stop offset="1" stop-color="#f68e48" />
+        </linearGradient>
+        <g clip-path="url(#clip)">
+          <path d="M-100,-102m-28,0v300h300z" fill="url(#gradient-1)" />
+          <path d="M-100,-102m28,0h300v300z" fill="url(#gradient-3)" />
+          <path d="M-100,-102l300,300" fill="none" stroke="url(#gradient-2)" stroke-width="40" />
+        </g>
+      </svg> by Prashant Kuntala
+      <a href="https://github.com/PrashantKuntala/viz" class="d-flex align-items-center text-dark text-decoration-none float-end">
+        <span class="fs-4"><i data-feather="github"></i></span>
+      </a>
+
+    </footer>
+  </div>
+
+  <script>
+    // feathericons setup
+    feather.replace()
+  </script>
+</body>
+
+</html>
