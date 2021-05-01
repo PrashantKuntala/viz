@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Visualizations in D3</title>
+  <title>01-Histograms</title>
   <!-- custom styles -->
-  <link rel="stylesheet" href="./css/master.css">
+  <link rel="stylesheet" href="./css/style.css">
 
   <!-- Production: using cdn for -->
   <!-- ################################################################################# -->
@@ -21,48 +21,56 @@
   <!-- Bootstrap CSS -->
   <!-- <link rel="stylesheet" href="./../../css/bootstrap.min.css"> -->
   <!-- ################################################################################# -->
+
+
 </head>
 
 <body>
 
   <div class="container py-4">
+    <a href="https://prashantkuntala.github.io/viz/" class="text-dark text-decoration-none">
+      <span class="fs-4"><i data-feather="arrow-left"></i> Back</span>
+    </a>
+    <hr>
 
     <div class="p-5 mb-4 bg-light rounded-3">
       <div class="container-fluid py-2" id="chartArea">
-        <h1 class="display-5 fw-bold">A Collection of Data Visualizations in
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 116 111">
-            <clipPath id="clip">
-              <path
-                d="M0,0h7.75a45.5,45.5 0 1 1 0,91h-7.75v-20h7.75a25.5,25.5 0 1 0 0,-51h-7.75zm36.2510,0h32a27.75,27.75 0 0 1 21.331,45.5a27.75,27.75 0 0 1 -21.331,45.5h-32a53.6895,53.6895 0 0 0 18.7464,-20h13.2526a7.75,7.75 0 1 0 0,-15.5h-7.75a53.6895,53.6895 0 0 0 0,-20h7.75a7.75,7.75 0 1 0 0,-15.5h-13.2526a53.6895,53.6895 0 0 0 -18.7464,-20z" />
-            </clipPath>
-            <linearGradient id="gradient-1" gradientUnits="userSpaceOnUse" x1="7" y1="64" x2="50" y2="107">
-              <stop offset="0" stop-color="#f9a03c" />
-              <stop offset="1" stop-color="#f7974e" />
-            </linearGradient>
-            <linearGradient id="gradient-2" gradientUnits="userSpaceOnUse" x1="2" y1="-2" x2="87" y2="84">
-              <stop offset="0" stop-color="#f26d58" />
-              <stop offset="1" stop-color="#f9a03c" />
-            </linearGradient>
-            <linearGradient id="gradient-3" gradientUnits="userSpaceOnUse" x1="45" y1="-10" x2="108" y2="53">
-              <stop offset="0" stop-color="#b84e51" />
-              <stop offset="1" stop-color="#f68e48" />
-            </linearGradient>
-            <g clip-path="url(#clip)">
-              <path d="M-100,-102m-28,0v300h300z" fill="url(#gradient-1)" />
-              <path d="M-100,-102m28,0h300v300z" fill="url(#gradient-3)" />
-              <path d="M-100,-102l300,300" fill="none" stroke="url(#gradient-2)" stroke-width="40" />
-            </g>
-          </svg>
-        </h1>
-
-        <ol class="list-group list-group-numbered mt-3">
-          <li class="list-group-item">
-            <a href="/projects/01/index.html" class="text-decoration-none text-dark"> Histogram of RNA Pol-II coding genes across four gene categories as described in the Yeast Epigenome Project. </a>
-          </li>
-        </ol>
+        <h1 class="display-5 fw-bold">Histogram of RNA Pol-II coding genes</h1>
+        <p class="col-md-8 "> across four gene categories as described in the Yeast Epigenome Project.</p>
+        <div id="wrapper"></div>
       </div>
     </div>
 
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+          <h2>Method</h2>
+          <ul>
+            <li> Data for 392 protein targets were retrieved from <a href="http://yeastepigenome.org/" target="_blank" class="text-light text-decoration-underline">yeastepigenome.org</a></li>
+            <li> Each target had zero or more replicates and consists of only YPD/Normal (growth condition) samples.</li>
+            <li> The gene counts per gene category was calculated. For targets which had replicates, gene counts were merged and duplicates were removed.</li>
+            <li>Then, the genecounts data was binned using <a href="https://observablehq.com/@d3/d3-bin" target="_blank" class="text-light text-decoration-underline"> d3.bin() </a> for each gene category to generate the histogram.</li>
+          </ul>
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>How to read</h2>
+          <ul>
+            <li>
+              Each bar represents a bin.
+            </li>
+            <li>
+              No.of targets in each bin is given by the bar height.
+            </li>
+            <li>
+              For example, the RP genes histogram shows that there are about 188 targets that bind to less than 10 RP genes.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <footer class="pt-3 mt-4 text-muted border-top">
       Made with <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="-10 -10 116 111">
@@ -120,6 +128,9 @@
   <!-- Feather svg icons -->
   <!-- <script src="./../../js/feather.min.js" charset="utf-8"></script> -->
   <!-- ################################################################################# -->
+
+  <!-- main script -->
+  <script src="./js/main.js" charset="utf-8"></script>
 
   <script>
     // feathericons setup
